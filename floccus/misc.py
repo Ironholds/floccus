@@ -8,4 +8,4 @@ def get_filepath(date = None):
     date = datetime.date.fromordinal(datetime.date.today().toordinal()-1)
   parsed_date = date.strftime("%Y%m%d")
   path = "/a/mw-log/archive/CirrusSearchRequests.log-" + parsed_date + ".gz"
-  return path, date
+  return path
