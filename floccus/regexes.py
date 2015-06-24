@@ -35,3 +35,13 @@ get_elasticsearch_time_regex = re.compile("(?<= and )\\d{1,}(?= Elasticsearch mi
 A regular expression for identifying the total time taken to process and return a request
 """
 get_total_time_regex = re.compile("(?<= took )\\d{1,}(?= millis and)")
+
+"""
+A regular expression for identifying whether a request was a prefix search request
+"""
+check_prefix_search_regex = re.compile(" prefix search for '")
+
+"""
+A regular expression for identifying whether a request was a full-text search request
+"""
+check_full_search_regex = re.compile(" full_text search for '")
