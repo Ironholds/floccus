@@ -8,7 +8,6 @@ setup(
     url='https://github.com/Ironholds/floccus',
     license=open('LICENSE').read(),
     description='A set of utilities for handling CirrusSearch log data',
-    long_description=open('README.rst').read(),
     classifiers=[
         "Programming Language :: Python",
         "Intended Audience :: Science/Research",
