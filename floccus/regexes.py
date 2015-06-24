@@ -27,8 +27,11 @@ A regular expression for checking whether a request came via the web interface.
 check_web_regex = re.compile("Requested via web\\.")
 
 """
-A regular expression for extracting queries from rows. Used in get_query (see gets.py)
+A regular expression for identifying the time elasticsearch spent processing a request
 """
 get_elasticsearch_time_regex = re.compile("(?<= and )\\d{1,}(?= Elasticsearch millis.)")
 
+"""
+A regular expression for identifying the total time taken to process and return a request
+"""
 get_total_time_regex = re.compile("(?<= took )\\d{1,}(?= millis and)")
