@@ -1,4 +1,5 @@
 from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='floccus',
@@ -8,6 +9,7 @@ setup(
     url='https://github.com/Ironholds/floccus',
     license=open('LICENSE').read(),
     description='A set of utilities for handling CirrusSearch log data',
+    packages=find_packages(),
     classifiers=[
         "Programming Language :: Python",
         "Intended Audience :: Science/Research",
