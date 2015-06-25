@@ -60,3 +60,8 @@ get_returned_results_regex = re.compile("(?<= total results and returned )\\d{1,
 A regular expression for identifying and extracting the returned results count
 """
 get_result_offset_regex = re.compile("(?<= of them starting at )\\d{1,}(?=.)")
+
+"""
+A regular expression for identifying and extracting the returned results count
+"""
+get_machine_regex = re.compile("(?<=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} )mw\\d{1,}")

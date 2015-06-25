@@ -5,6 +5,21 @@ def get_query(row):
   return generic_get(get_query_regex, row)
 
 """
+Extract a wiki from a row
+"""
+
+def get_wiki(row):
+  return generic_get(get_wiki_regex, row)
+
+"""
+Extract a machine from a row
+"""
+
+def get_machine(row):
+  return generic_get(get_machine_regex, row)
+
+
+"""
 Extract the elasticsearch processing time from a row. -1 is returned if it wasn't identifiable.
 """
 def get_elasticsearch_time(row):
