@@ -23,7 +23,8 @@ def check_web(row):
   return generic_check(check_web_regex, row)
 
 """
-Check whether a request was a prefix search request
+Check whether a request was a prefix search request. The alternative is full text (check_full_search()) but
+please be aware that there are other options in the logfiles.
 """
 def check_prefix_search(row):
   return generic_check(check_prefix_search_regex, row)
