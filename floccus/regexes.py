@@ -45,3 +45,18 @@ check_prefix_search_regex = re.compile(" prefix search for '")
 A regular expression for identifying whether a request was a full-text search request
 """
 check_full_search_regex = re.compile(" full_text search for '")
+
+"""
+A regular expression for identifying and extracting the total results count
+"""
+get_total_results_regex = re.compile("(?<=Found )\\d{1,}(?= total results and)")
+
+"""
+A regular expression for identifying and extracting the returned results count
+"""
+get_returned_results_regex = re.compile("(?<= total results and returned )\\d{1,}(?= of them starting at )")
+
+"""
+A regular expression for identifying and extracting the returned results count
+"""
+get_result_offset_regex = re.compile("(?<= of them starting at )\\d{1,}(?=.)")
