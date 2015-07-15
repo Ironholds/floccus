@@ -17,7 +17,6 @@ def get_filepath(date = None):
 """
 Write out a counter
 """
-
 def write_counter(counter, date, file):
   if(os.path.exists(file) == False):
     with open(file, "wb") as tsv_file:
