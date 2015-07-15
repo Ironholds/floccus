@@ -73,3 +73,15 @@ def get_result_offset(row):
   except:
     result = -1
   return result
+
+"""
+Extract the machine that ran the request
+"""
+def get_machine(row):
+  return generic_get(get_machine_regex, row)
+
+"""
+Extract the UUID of the request runner
+"""
+def get_executor(row):
+  return generic_get(get_executor_regex, row)

@@ -4,7 +4,7 @@ import re
 A regular expression for identifying if a row is valid in a trivial way - it checks for a valid timestamp. A row is
 valid if it has one and only one timestamp. Used in check_valid (see checks.py)
 """
-check_valid_regex = re.compile("^\d{4}-\d{2}-\d{2}")
+check_valid_regex = re.compile("^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}")
 
 """
 A regular expression for identifying if a row returned 0 total results. Used in check_zero (see checks.py)
@@ -57,11 +57,16 @@ A regular expression for identifying and extracting the returned results count
 get_returned_results_regex = re.compile("(?<= total results and returned )\\d{1,}(?= of them starting at )")
 
 """
-A regular expression for identifying and extracting the returned results count
+A regular expression for identifying and extracting the results offset
 """
 get_result_offset_regex = re.compile("(?<= of them starting at )\\d{1,}(?=.)")
 
 """
-A regular expression for identifying and extracting the returned results count
+A regular expression for identifying and extracting the machine that ran the query
 """
 get_machine_regex = re.compile("(?<=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} )mw\\d{1,}")
+
+"""
+A regular expression for identifying and extracting the executor for the query
+"""
+get_executor_regex = re.compile("(?<=by executor)(.{16})(?=\.$)")
