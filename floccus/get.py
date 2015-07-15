@@ -85,3 +85,9 @@ Extract the UUID of the request runner
 """
 def get_executor(row):
   return generic_get(get_executor_regex, row)
+
+"""
+Extract the suggestion provided, if any
+"""
+def get_suggestion(row):
+  return generic_get(get_suggestion_regex, row)

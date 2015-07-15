@@ -34,3 +34,9 @@ Check whether a request was a full text request
 """
 def check_full_search(row):
   return generic_check(check_full_search_regex, row)
+
+"""
+Check whether a request was a full text request
+"""
+def check_suggestion(row):
+  return generic_check(get_suggestion_regex, row)

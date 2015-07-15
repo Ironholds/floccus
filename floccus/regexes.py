@@ -59,7 +59,7 @@ get_returned_results_regex = re.compile("(?<= total results and returned )\\d{1,
 """
 A regular expression for identifying and extracting the results offset
 """
-get_result_offset_regex = re.compile("(?<= of them starting at )\\d{1,}(?=.)")
+get_result_offset_regex = re.compile("(?<= of them starting at )\\d{1,}")
 
 """
 A regular expression for identifying and extracting the machine that ran the query
@@ -70,3 +70,5 @@ get_machine_regex = re.compile("(?<=^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} )mw\\d{
 A regular expression for identifying and extracting the executor for the query
 """
 get_executor_regex = re.compile("(?<=by executor)(.{16})(?=\.$)")
+
+get_suggestion_regex = re.compile("(?<= and suggested ').*(?='\. )")
