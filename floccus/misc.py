@@ -25,3 +25,16 @@ def write_counter(counter, date, file):
     write_obj = csv.writer(tsv_file, delimiter = "\t")
     for entry in counter:
       write_obj.writerow([str(date), entry, counter[entry]])
+
+"""
+Create a date range you can pythonically loop over to backfill datasets.
+"""
+def date_range(start_str, end_str):
+  start = datetime.datetime.strptime(start_str, "%Y-%m-%d").date()
+  end   = datetime.datetime.strptime(end_str, "%Y-%m-%d").date()
+  step = datetime.timedelta(days=1)
+  result = []
+  while start <= end:
+      result.append(start)
+      start += step
+  return result
