@@ -17,6 +17,12 @@ def get_query(row):
   return generic_get(regexes.get_query_regex, row)
 
 """
+Extract the index names from a row (returns a list)
+"""
+def get_indexes(row):
+  return generic_get(regexes.get_indexes, row).split(",")
+
+"""
 Extract a wiki from a row
 """
 

@@ -14,7 +14,12 @@ check_zero_regex = re.compile("Found 0 total results")
 """
 A regular expression for extracting queries from rows. Used in get_query (see gets.py)
 """
-get_query_regex = re.compile("(?<= search for ').*(?=' against .*wiki_content took)")
+get_query_regex = re.compile("(?<= search for ').*(?=' against [a-z_\\d,]+ took )")
+
+"""
+A regular expression for extracting index names. Used in get_indexes (see get.py)
+"""
+get_indexes = re.compile("(?<=' against )[a-z_\\d,]+(?= took )")
 
 """
 A regular expression for checking whether a request came via the API.
